@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Up My Life</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+    /* Page containers */
+    .page {
+      width: 100%;
+      height: 100vh;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .active {
+      display: flex;
+    }
+
+    /* First page (dark) */
+    #page1 {
+      background: #0a0a1a;
+      color: white;
+    }
+    #page1 h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    #page1 button {
+      background: linear-gradient(90deg, #8e0e00, #1f1c2c);
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transition: all 0.3s;
+    }
+    #page1 button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    }
+
+    /* Second page */
+    #page2 {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: white;
+      padding: 20px;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .card {
+      background: rgba(0,0,0,0.6);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .card h2 {
+      font-family: "Dancing Script", cursive;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .card p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+    .highlight {
+      font-family: "Dancing Script", cursive;
+      font-size: 1.2em;
+      color: #ff69b4;
+    }
+    .footer {
+      margin-top: 15px;
+      font-style: italic;
+      color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <!-- First page -->
+  <div id="page1" class="page active">
+    <h1>Light Up My Life</h1>
+    <button onclick="showPage2()">Turn the Lights On ✨</button>
+  </div>
+
+  <!-- Second page -->
+  <div id="page2" class="page">
+    <div class="card">
+      <h2>🎉 Happy Birthday Atharvaa 🎉</h2>
+      <p>
+        On this special day, I want to take a moment to celebrate not just your birthday,
+        but the incredible person you are. Your presence lights up every room you enter,
+        just like how you've lit up our lives.
+      </p>
+      <p>
+        Your kindness, wisdom, and beautiful spirit inspire everyone around you.
+        You have this magical way of making ordinary moments feel extraordinary,
+        and today is all about celebrating the magic that is uniquely you.
+      </p>
+      <p>
+        May this new year of your life be filled with endless joy, beautiful surprises,
+        and all the happiness your heart can hold. You deserve nothing but the very best
+        that life has to offer.
+      </p>
+      <p class="highlight">
+        Wishing you the most wonderful birthday! 🎂✨
+      </p>
+      <hr style="border: 0; height: 1px; background: #ff69b4; margin: 15px 0;">
+      <p class="footer">
+        With love and warm wishes,<br>
+        Someone who cares about you 💕
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showPage2() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+  </script>
+</body>
+</html>

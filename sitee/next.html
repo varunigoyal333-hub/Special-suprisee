@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror of Memories</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #330033, #0d001a 90%);
+      font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff4da6;
+      text-shadow: 0 0 15px rgba(255, 77, 166, 0.8);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* Main memory box */
+    .memory-box {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 77, 166, 0.5);
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .memory-box:hover {
+      box-shadow: 0 0 40px rgba(255, 77, 166, 0.9);
+      transform: scale(1.05);
+    }
+
+    .heart {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* Bottom-right next button */
+    .next-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: #800033;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 77, 166, 0.6);
+      transition: 0.3s ease;
+    }
+
+    .next-button:hover {
+      background: #b30047;
+      box-shadow: 0 0 20px rgba(255, 77, 166, 0.9);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mirror of Memories</h1>
+
+  <div class="memory-box" onclick="unlockMemories()">
+    <div class="heart">💕</div>
+    <p>Click to unlock memories</p>
+  </div>
+
+  <button class="next-button" onclick="window.location.href='gallery.html'">
+    Next Page ➡️
+  </button>
+
+  <script>
+    function unlockMemories() {
+      // You can change this to redirect to a special memory page
+      window.location.href = "gallery.html";
+    }
+  </script>
+
+</body>
+</html>
